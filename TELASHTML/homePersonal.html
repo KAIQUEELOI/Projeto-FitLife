@@ -5,11 +5,149 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>FitLife</title>
 
-  <link rel="stylesheet" href="../TELASCSS/homePersonal.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="homePersonal.css">
+  <style>
+    :root {
+  --orange: #ff8a00;
+  --bg: #f6f6f8;
+  --card: #ffffff;
+  --border: #e6e6eb;
+  --text: #1c1c1e;
+  --muted: #6e6e73;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #3a3a3c;
+  display: flex;
+  justify-content: center;
+  padding: 24px 0;
+}
+
+/* Simulação do celular */
+.phone {
+  width: 490px;
+  background: var(--bg);
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+/* Header */
+.header {
+  height: 60px;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+   h1{
+     color: var(--orange);
+  font-size: 18px;
+  margin: 0 0 6px;
+   }
+
+}
+
+.app-icon {
+  color: var(--orange);
+  font-size: 20px;
+}
+
+.perfil {
+  font-size: 12px;
+  color: var(--text);
+}
+
+/* Conteúdo */
+.content {
+  padding: 16px;
+}
+
+/* Card principal */
+.card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.highlight h2 {
+  font-size: 16px;
+  margin: 0 0 8px;
+}
+
+.highlight p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+
+.btn {
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+a{
+    text-decoration: none;
+    color: white;
+  }
+
+}
+
+.btn + .btn {
+  margin-top: 10px;
+}
+
+.btn.primary {
+  background: var(--orange);
+  color: #fff;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.grid-card {
+
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  height: 134px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+}
+
+.grid-card span {
+  font-size: 12px;
+  font-weight: 600;
+  color: #3a3a3c;
+  text-align: center;
+}
+
+
+  </style>
+
 </head>
 <body>
 
