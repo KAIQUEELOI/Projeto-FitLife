@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Fitlife</title>
+  <style>
+    * { box-sizing: border-box; font-family: Arial, Helvetica, sans-serif; }
+    body {
+      margin: 0;
+      background: #0e0e0e;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      padding: 20px 0;
+    }
+    .container {
+      width: 100%;
+      max-width: 420px;
+      background: #121212;
+      padding: 16px;
+      border-radius: 14px;
+    }
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+    .logo { color: #ff8c00; font-weight: bold; font-size: 18px; }
+    .card {
+      background: #1a1a1a;
+      border-radius: 12px;
+      padding: 14px;
+      margin-bottom: 14px;
+    }
+    .card h3 { margin: 0 0 8px; font-size: 14px; }
+    .week {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+    .day {
+      padding: 8px 10px;
+      border-radius: 8px;
+      background: #222;
+      font-size: 12px;
+    }
+    .day.active { background: #ff8c00; color: #000; }
+    .stats {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 12px;
+      text-align: center;
+    }
+    .stat strong { display: block; font-size: 14px; }
+    .btn {
+      background: #ff8c00;
+      color: #000;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .highlight { background: #1f1f23; }
+    .bars {
+      display: flex;
+      align-items: flex-end;
+      gap: 10px;
+      height: 120px;
+      margin-top: 10px;
+    }
+    .bar {
+      width: 20%;
+      background: #ff8c00;
+      border-radius: 6px 6px 0 0;
+    }
+    .bar.purple { background: #6a5cff; }
+    .nav {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+      color: #aaa;
+      font-size: 12px;
+    }
+    .nav span.active { color: #ff8c00; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="top">
+      <div class="logo">Fitlife</div>
+      <div>🔔 ⚙️</div>
+    </div>
+
+    <div class="card">
+      <h3>Resumo Semanal</h3>
+      <div class="week">
+        <div class="day">Seg</div>
+        <div class="day">Ter</div>
+        <div class="day active">Qua</div>
+        <div class="day">Qui</div>
+        <div class="day">Sex</div>
+      </div>
+      <div class="stats">
+        <div class="stat"><strong>700</strong>Passos</div>
+        <div class="stat"><strong>120</strong>Min</div>
+        <div class="stat"><strong>3x</strong>Objetivo</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Treino por Objetivo</h3>
+      <p style="font-size:12px; color:#ccc">Resultados personalizados</p>
+      <button class="btn">Começar ▶</button>
+    </div>
+
+    <div class="card highlight">
+      <h3>Desafios Exclusivos</h3>
+      <p style="font-size:12px">Supere seus limites</p>
+      <button class="btn">Começar ▶</button>
+    </div>
+
+    <div class="card">
+      <h3>Exercícios Avançados</h3>
+      <p style="font-size:12px">Melhore seu rendimento</p>
+      <button class="btn">Começar ▶</button>
+    </div>
+
+    <div class="card">
+      <h3>Progresso de Treinos</h3>
+      <div class="bars">
+        <div class="bar" style="height:40%"></div>
+        <div class="bar" style="height:70%"></div>
+        <div class="bar" style="height:90%"></div>
+        <div class="bar" style="height:55%"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Guia de Nutrição</h3>
+      <p style="font-size:12px">Alimente-se melhor</p>
+      <button class="btn">Começar ▶</button>
+    </div>
+
+    <div class="card">
+      <h3>Desempenho em Desafios</h3>
+      <div class="bars">
+        <div class="bar purple" style="height:30%"></div>
+        <div class="bar purple" style="height:60%"></div>
+        <div class="bar purple" style="height:40%"></div>
+        <div class="bar purple" style="height:80%"></div>
+      </div>
+    </div>
+
+    <div class="nav">
+      <span class="active">🏠 Início</span>
+      <span>🏋️ Treinos</span>
+      <span> Novo Treino</span>
+      <span>👤 Perfil</span>
+    </div>
+  </div>
+</body>
+</html>

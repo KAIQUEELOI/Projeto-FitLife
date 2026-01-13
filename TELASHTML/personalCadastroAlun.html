@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dados do Aluno</title>
+
+  <link rel="stylesheet" href="../TELASCSS/personalCadastroAlun.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="personalCadastroAlun.css">
+</head>
+<body>
+  <main class="container">
+
+     <header>
+    <a href="../TELASHTML/homePersonal.html"><span class="voltarHeader">Voltar</span></a>
+    <span class="voltarInicio"><a href="homePersonal.html">Home</a></span>
+  </header>
+
+    <h1 class="dadosAluno">Dados do Aluno</h1>
+
+    <!-- Dados Pessoais -->
+    <section class="card">
+      <h2>Dados Pessoais</h2>
+
+      <label>Nome Completo</label>
+      <input type="text" placeholder="Nome do aluno">
+
+      <div class="row">
+        <div>
+          <label>Idade</label>
+          <input type="number" placeholder="Anos">
+        </div>
+        <div>
+          <label>Altura (cm)</label>
+          <input type="number" placeholder="cm">
+        </div>
+      </div>
+
+      <label>Gênero</label>
+      <select>
+        <option>Selecione</option>
+        <option>Masculino</option>
+        <option>Feminino</option>
+        <option>Outro</option>
+      </select>
+
+      <label>Objetivo</label>
+      <textarea placeholder="Ex: Ganho de massa, Perda de peso"></textarea>
+    </section>
+
+    <!-- Medidas -->
+    <section class="card">
+      <h2>Medidas Corporais (cm)</h2>
+
+      <div class="row">
+        <input type="number" placeholder="Bíceps">
+        <input type="number" placeholder="Antebraço">
+      </div>
+
+      <div class="row">
+        <input type="number" placeholder="Peitoral">
+        <input type="number" placeholder="Costas">
+      </div>
+
+      <div class="row">
+        <input type="number" placeholder="Cintura">
+        <input type="number" placeholder="Quadril">
+      </div>
+
+      <div class="row">
+        <input type="number" placeholder="Coxa">
+        <input type="number" placeholder="Panturrilha">
+      </div>
+    </section>
+
+    <!-- Anotações -->
+    <section class="card">
+      <h2>Anotações</h2>
+      <textarea rows="4" placeholder="Observações, histórico médico, preferências..."></textarea>
+    </section>
+
+  </main>
+
+  <!-- Botão fixo -->
+  <footer class="footer">
+    <a href="./criarTreinoDoAluno.html"><button class="btn-primary">Avançar</button></a>
+  </footer>
+
+</body>
+</html>

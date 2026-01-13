@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Relatório de Alunos</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background: #F4F5F8;
+        padding: 12px;
+        display:flex;
+        justify-content:center;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 450px;
+    }
+
+    /* Header */
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 0;
+    }
+
+    .header h2 {
+        font-size: 18px;
+        font-weight: 600;
+        flex: 1;
+        text-align: center;
+    }
+
+    .icon {
+        width: 22px;
+        height: 22px;
+        background: none;
+        color: #FF9800;
+        border-radius: 6px;
+    }
+
+    /* Tabs */
+    .tabs {
+        display: flex;
+        gap: 8px;
+        overflow-x: auto;
+        padding-bottom: 12px;
+    }
+
+    .tab {
+        padding: 6px 14px;
+        font-size: 14px;
+        border-radius: 14px;
+        border: 1px solid #ddd;
+        background: #fff;
+        white-space: nowrap;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .tab.active {
+        background: #FF9800;
+        color: #fff;
+        border-color: #FF9800;
+    }
+
+    /* Cards */
+    .card {
+        background: #FFEBCF;
+        border-radius: 12px;
+        padding: 14px;
+        margin-top: 12px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        cursor: pointer;
+    }
+
+    .card img {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+    }
+
+    .info {
+        flex: 1;
+    }
+
+    .name {
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    .matricula {
+        font-size: 13px;
+        color: #555;
+        margin-top: 2px;
+    }
+
+    .arrow {
+        font-size: 18px;
+        font-weight: bold;
+        opacity: .6;
+    }
+
+</style>
+</head>
+
+<body>
+<div class="container">
+
+    <div class="header">
+        <div class="icon">Voltar</div>
+        <h2>Relatório de Alunos</h2>
+        <div class="icon"></div>
+    </div>
+
+    <div class="tabs">
+        <div class="tab active" data-filter="todos">Todos</div>
+        <div class="tab" data-filter="ativos">Ativos</div>
+        <div class="tab" data-filter="inativos">Inativos</div>
+        <div class="tab" data-filter="homens">Homens</div>
+        <div class="tab" data-filter="mulheres">Mulheres</div>
+    </div>
+
+    <div id="list">
+        <div class="card" data-status="ativo" data-gender="homem">
+            <img src="https://i.pravatar.cc/150?img=1">
+            <div class="info">
+                <div class="name">Novo aluno</div>
+                <div class="matricula">Matrícula: 2023001</div>
+            </div>
+            <div class="arrow">›</div>
+        </div>
+
+        <div class="card" data-status="ativo" data-gender="mulher">
+            <img src="https://i.pravatar.cc/150?img=5">
+            <div class="info">
+                <div class="name">Maria Oliveira</div>
+                <div class="matricula">Matrícula: 2023002</div>
+            </div>
+            <div class="arrow">›</div>
+        </div>
+
+        <div class="card" data-status="inativo" data-gender="homem">
+            <img src="https://i.pravatar.cc/150?img=12">
+            <div class="info">
+                <div class="name">Pedro Santos</div>
+                <div class="matricula">Matrícula: 2023003</div>
+            </div>
+            <div class="arrow">›</div>
+        </div>
+
+        <div class="card" data-status="ativo" data-gender="mulher">
+            <img src="https://i.pravatar.cc/150?img=29">
+            <div class="info">
+                <div class="name">Ana Costa</div>
+                <div class="matricula">Matrícula: 2023004</div>
+            </div>
+            <div class="arrow">›</div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    const tabs = document.querySelectorAll(".tab");
+    const cards = document.querySelectorAll(".card");
+
+    tabs.forEach(tab => {
+        tab.addEventListener("click", () => {
+            document.querySelector(".tab.active").classList.remove("active");
+            tab.classList.add("active");
+
+            const filter = tab.dataset.filter;
+
+            cards.forEach(card => {
+                card.style.display = "flex"; // reset
+
+                if (filter === "ativos" && card.dataset.status !== "ativo")
+                    card.style.display = "none";
+
+                if (filter === "inativos" && card.dataset.status !== "inativo")
+                    card.style.display = "none";
+
+                if (filter === "homens" && card.dataset.gender !== "homem")
+                    card.style.display = "none";
+
+                if (filter === "mulheres" && card.dataset.gender !== "mulher")
+                    card.style.display = "none";
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

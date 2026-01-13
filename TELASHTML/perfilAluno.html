@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Perfil de Usuário | Fitlife</title>
+  <style>
+   * {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f5f6fa; /* fundo claro suave */
+  color: #333; /* texto harmonioso */
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.container {
+  width: 100%;
+  height: 640px;
+  max-width: 420px;
+  background: #ffffff; /* container branco */
+  padding: 20px;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.05); /* leve sombra */
+}
+
+.h2Voltar {
+  color: #ffa733;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+h1 { font-size: 18px; margin: 0; color: #333; }
+h2 { font-size: 16px; margin: 20px 0 10px; color: #444; }
+
+label {
+  font-size: 13px;
+  display: block;
+  margin-bottom: 6px;
+  color: #666;
+}
+
+input, select {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #dcdcdc;
+  margin-bottom: 14px;
+  background: #fafafa;
+  color: #333;
+}
+
+input::placeholder {
+  color: #9f9f9f;
+}
+
+.section {
+  background: #f1f1f1; /* seção cinza claro */
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #e6e6e6;
+}
+
+button {
+  width: 100%;
+  padding: 16px;
+  background: #ff8c00;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #ffa733;
+}
+
+  </style>
+</head>
+<body>
+    <main class="container">
+        <div class="header">
+      <span>Voltar</span>
+      <h1>Aluno</h1>
+    </div>
+    <div class="section">
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        <h2>Praticante / Aluno</h2>
+      </div>
+
+      <label>Idade (em anos)</label>
+      <input type="number" placeholder="18" />
+
+      <label>Peso (em kg)</label>
+      <input type="number" placeholder="70" />
+
+      <label>Altura (em cm)</label>
+      <input type="number" placeholder="160" />
+
+      <label>Frequencia de treino</label>
+      <select>
+        <option>selecione sua frequencia</option>
+        <option>1 a 3 vezes semanal</option>
+        <option>4 a 5 vezes semanal</option>
+        <option>6 a 7 vezes semanal</option>
+      </select>
+
+      <label>Meta</label>
+      <select>
+        <option>Selecione sua meta</option>
+        <option>Perda de Peso</option>
+        <option>Ganho de Massa</option>
+        <option>Condicionamento Físico</option>
+        <option>Reabilitação</option>
+      </select>
+
+      <label>Nivel de treino</label>
+      <select>
+        <option>selecione seu nivel de treino</option>
+        <option>0 a 1 ano de treino</option>
+        <option>1 a 2 ano de treino</option>
+        <option> 2 a 3 ano de treino</option>
+        <option>+3 anos de treino</option>
+      </select>
+    </div>
+
+    <button>AVANÇAR</button>
+  </div>
+  </main>
+</body>
+</html>

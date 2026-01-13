@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>FitLife – Exercícios</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    :root {
+      --bg: #0e0e0e;
+      --card: #1a1a1a;
+      --primary: #f4a623;
+      --text: #ffffff;
+      --muted: #aaaaaa;
+      --radius: 14px;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+    }
+
+    .app {
+      width: 100%;
+      max-width: 420px;
+      min-height: 100vh;
+      padding-bottom: 70px;
+    }
+
+    /* HEADER */
+    header {
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 1px solid #222;
+    }
+
+    header h1 {
+      font-size: 18px;
+      margin: 0;
+    }
+
+    /* SEARCH */
+    .search {
+      padding: 16px;
+    }
+
+    .search input {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: var(--radius);
+      border: none;
+      outline: none;
+      background: #222;
+      color: var(--text);
+    }
+
+    /* EXERCISE LIST */
+    .list {
+      padding: 0 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .exercise {
+      background: var(--card);
+      border-radius: var(--radius);
+      display: flex;
+      gap: 12px;
+      padding: 12px;
+      align-items: center;
+    }
+
+    .exercise img {
+      width: 70px;
+      height: 70px;
+      border-radius: 10px;
+      object-fit: cover;
+      background: #333;
+    }
+
+    .info {
+      flex: 1;
+    }
+
+    .info h3 {
+      margin: 0;
+      font-size: 15px;
+    }
+
+    .stars {
+      color: var(--primary);
+      font-size: 13px;
+      margin: 4px 0;
+    }
+
+    .muscle {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* BOTTOM NAV */
+    nav {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      max-width: 420px;
+      background: #111;
+      border-top: 1px solid #222;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+    }
+
+    nav span {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    nav .active {
+      color: var(--primary);
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+
+    <header>
+      ←
+      <h1>Exercícios</h1>
+    </header>
+
+    <div class="search">
+      <input type="text" placeholder="Buscar exercício" />
+    </div>
+
+    <div class="list">
+      <div class="exercise">
+        <img src="" alt="">
+        <div class="info">
+          <h3>Rosca Direta</h3>
+          <div class="stars">★★★★★</div>
+          <div class="muscle">Bíceps</div>
+        </div>
+      </div>
+
+      <div class="exercise">
+        <img src="" alt="">
+        <div class="info">
+          <h3>Agachamento</h3>
+          <div class="stars">★★★★☆</div>
+          <div class="muscle">Pernas</div>
+        </div>
+      </div>
+
+      <div class="exercise">
+        <img src="" alt="">
+        <div class="info">
+          <h3>Flexão</h3>
+          <div class="stars">★★★★★</div>
+          <div class="muscle">Peito</div>
+        </div>
+      </div>
+
+      <div class="exercise">
+        <img src="" alt="">
+        <div class="info">
+          <h3>Leg Press</h3>
+          <div class="stars">★★★★☆</div>
+          <div class="muscle">Pernas</div>
+        </div>
+      </div>
+    </div>
+
+    <nav>
+      <span>Início</span>
+      <span class="active">Exercícios</span>
+      <span>Perfil</span>
+    </nav>
+
+  </div>
+</body>
+</html>

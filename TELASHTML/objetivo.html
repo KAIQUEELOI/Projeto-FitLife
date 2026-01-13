@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FitLife - Objetivos</title>
+
+<style>
+/* FONT + RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Inter", sans-serif;
+}
+
+body{
+  background:#f4f3f3;
+  display:flex;
+  justify-content:center;
+  padding:22px;
+  color:#222;
+}
+
+/* CONTAINER */
+.container{
+  width:100%;
+  width:450px;
+  display:flex;
+  flex-direction:column;
+  gap:22px;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 9px;
+}
+
+/* HEADER */
+.header{
+  display:flex;
+  justify-content:center;
+  padding:8px 0 6px 0;
+}
+
+.logo{
+  font-size:28px;
+  font-weight:800;
+  color:#ff7a1a;
+}
+
+/* TITULO */
+h1{
+  font-size:24px;
+  font-weight:700;
+  color:#333;
+  text-align:center;
+}
+
+/* CARDS */
+.card{
+  background:#f7b27a;
+  border-radius:14px;
+  padding:18px 20px;
+  border:1px solid #ffe0c9;
+  box-shadow:0 3px 8px rgba(0,0,0,0.08);
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  transition:all .25s ease;
+}
+
+.card:hover{
+  transform:translateY(-2px);
+  box-shadow:0 5px 12px rgba(0,0,0,0.13);
+}
+
+.card h3{
+  font-size:17px;
+  font-weight:700;
+  color:#3a2105;
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+.card p{
+  font-size:14px;
+  color:#4a3b2c;
+  line-height:1.4;
+}
+
+/* BOTÕES */
+.btn, .btnNavVoltar{
+  border:none;
+  padding:9px 15px;
+  font-size:14px;
+  border-radius:10px;
+  font-weight:600;
+  cursor:pointer;
+  transition:all .22s ease;
+}
+
+/* botão ver mais */
+.card .btn{
+  background:#fff;
+  border:1px solid #d9d9d9;
+  color:#333;
+}
+
+.card .btn:hover{
+  border-color:#ff7a1a;
+  color:#ff7a1a;
+}
+
+/* NAV BAR */
+.nav{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+}
+
+.btnNavVoltar{
+  background:#fff;
+  border:1px solid #d9d9d9;
+  color:#333;
+}
+
+.btnNavVoltar:hover{
+  border-color:#bdbdbd;
+}
+
+.nav .btn{
+  background:#ff7a1a;
+  color:#fff;
+}
+
+.nav .btn:hover{
+  background:#ff8b3d;
+}
+
+/* RESPONSIVIDADE */
+@media(max-width:440px){
+  .nav{
+    flex-direction:column;
+  }
+  .btn, .btnNavVoltar{
+    width:100%;
+  }
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+  <div class="header">
+    <span class="logo">FitLife</span>
+  </div>
+
+  <h1>Objetivos</h1>
+
+  <div class="card">
+    <h3>💪 Ganho de Massa Muscular</h3>
+    <p>Programas de treino e dieta focados no crescimento muscular e aumento de força.</p>
+    <button class="btn">Ver mais</button>
+  </div>
+
+  <div class="card">
+    <h3>🔥 Perda de Gordura Corporal</h3>
+    <p>Estratégias eficazes para queimar gordura, definir o corpo e melhorar o metabolismo.</p>
+    <button class="btn">Ver mais</button>
+  </div>
+
+  <div class="card">
+    <h3>🏃 Aumento da Resistência</h3>
+    <p>Treinos cardiovasculares e funcionais para melhorar sua stamina e desempenho geral.</p>
+    <button class="btn">Ver mais</button>
+  </div>
+
+  <div class="card">
+    <h3>⚖️ Manter Peso</h3>
+    <p>Insira seu peso ideal para monitoramento e ajuste de metas.</p>
+    <button class="btn">Ver mais</button>
+  </div>
+
+  <div class="nav">
+    <button class="btnNavVoltar">Voltar</button>
+    <button class="btn">Continuar</button>
+  </div>
+
+</div>
+
+</body>
+</html>

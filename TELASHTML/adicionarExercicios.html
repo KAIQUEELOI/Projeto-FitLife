@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Criar Rotina</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root {
+    --orange: #FF8A00;
+    --gray-bg: #F2F2F7;
+    --gray-text: #6B6B6B;
+    --border: #E5E5EA;
+}
+
+body {
+    margin: 0;
+    background: var(--gray-bg);
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.app {
+    width: 100%;          /* ocupa toda a largura */
+    max-width: 480px;     /* limite visual (para simular mobile) */
+    background: white;
+    min-height: 100vh;
+    padding-bottom: 90px; /* espaço para botão inferior */
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border);
+
+    a{
+            text-decoration: none;
+            color:#FF8A00
+        }
+}
+
+.header-title {
+    font-weight: 600;
+}
+
+.homeBtn {
+    background: white;
+    color: #FF8A00;
+    font-size: 14px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+}
+
+.card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin: 12px 16px;
+    padding: 14px;
+   
+}
+
+.card-title {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Inputs */
+.input {
+   
+    width: 400px;
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-top: 6px;
+    font-size: 14px;
+}
+
+textarea.input {
+    height: 70px;
+    resize: none;
+}
+
+/* Search */
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    font-size: 14px;
+}
+
+.filter-btn {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+}
+
+/* Exercise Cards */
+.exercise-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin: 10px 16px;
+    padding: 14px;
+}
+
+.exercise-title {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.small-box {
+    flex: 1;
+}
+
+.small-title {
+    font-size: 12px;
+    color: var(--gray-text);
+}
+
+.small-value {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.btn-add {
+    background: var(--orange);
+    color: white;
+    font-size: 14px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    float: right;
+}
+
+/* Bottom Button */
+.bottom {
+    width: 100%;
+    max-width: 480px; /* acompanha o app */
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    border-top: 1px solid var(--border);
+    padding: 12px;
+    a{
+            text-decoration: none;
+            color: white;
+        }
+}
+
+.btn-save {
+    width: 100%;
+    background: var(--orange);
+    color: white;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Ajuste para telas grandes */
+@media (min-width: 1024px) {
+    .app {
+        margin-top: 20px;
+        border: 1px solid #ddd;
+        border-radius: 12px;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<div class="app">
+
+    <div class="header">
+        <a href="../TELASHTML/personalCadastroAlun.html">
+            <div>←</div>
+        </a>
+        <div class="header-title">Criar Rotina</div>
+        <button class="homeBtn"><a href="homePersonal.html">Home</a></button>
+    </div>
+
+    <div class="card">
+        <div class="card-title">Detalhes da Rotina</div>
+        <div>Nome da Rotina</div>
+        <input class="input" value="Treino Completo de Força">
+
+        <div style="margin-top:10px;">Instruções</div>
+        <textarea class="input">Foque na execução perfeita e controle da carga.</textarea>
+    </div>
+
+    <div class="card">
+        <div class="search-box">
+            <input class="search-input" placeholder="Buscar exercício">
+            <div class="filter-btn">🔍</div>
+        </div>
+    </div>
+
+    <!-- Exercícios -->
+    <div class="exercise-card">
+        <div class="exercise-title">Agachamento com Barra</div>
+        <div class="row">
+            <div class="small-box">
+                <div class="small-title">Séries</div>
+                <div class="small-value">3</div>
+            </div>
+            <div class="small-box">
+                <div class="small-title">Descanso</div>
+                <div class="small-value">60s</div>
+            </div>
+             <button class="btn-add">Adicionar</button>
+        </div>
+       
+    </div>
+
+    <div class="exercise-card">
+        <div class="exercise-title">Supino Reto Halteres</div>
+        <div class="row">
+            <div class="small-box">
+                <div class="small-title">Séries</div>
+                <div class="small-value">4</div>
+            </div>
+            <div class="small-box">
+                <div class="small-title">Descanso</div>
+                <div class="small-value">90s</div>
+            </div>
+            <button class="btn-add">Adicionar</button>
+        </div>
+        
+    </div>
+
+    <div class="exercise-card">
+        <div class="exercise-title">Remada Curvada</div>
+        <div class="row">
+            <div class="small-box">
+                <div class="small-title">Séries</div>
+                <div class="small-value">3</div>
+            </div>
+            <div class="small-box">
+                <div class="small-title">Descanso</div>
+                <div class="small-value">60s</div>
+            </div>
+              <button class="btn-add">Adicionar</button>
+        </div>
+      
+    </div>
+
+</div>
+
+<div class="bottom">
+    <button class="btn-save"><a href="../TELASHTML/treinoDoAlunoCriado.html">Salvar Rotina</a></button>
+</div>
+
+</body>
+</html>
